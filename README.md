@@ -1,2 +1,2 @@
-# Leetcode-Daily-Problems
-Problems solved by me on LeetCode everyday.
+# Daily-Practice-Problems
+Problems solved by me everyday.
