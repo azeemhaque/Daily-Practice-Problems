@@ -1,0 +1,5 @@
+str1 = "There are 2 apples for 4 boys"
+print("The original strings: " + str1)
+
+res = [int(i) for i in str1.split() if i.isdigit()]
+print("The numbers in the string are: " + str(res))
