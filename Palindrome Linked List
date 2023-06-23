@@ -1,0 +1,25 @@
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        ListNode slow = head;
+        boolean isPalin = true;
+        Stack<Integer> stack = new Stack<Integer>();
+
+        while(slow != null){
+            stack.push(slow.val);
+            slow = slow.next;
+        }
+        while(head != null){
+            int i = stack.pop();
+            if(head.val == i){
+                isPalin = true;
+            }
+            else{
+                isPalin = false;
+                break;
+            }
+            head = head.next;
+        }
+        return isPalin;
+    }
+
+}
