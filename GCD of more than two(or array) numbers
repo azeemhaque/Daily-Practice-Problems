@@ -1,0 +1,33 @@
+import java.util.*;
+import java.io.*;
+import java.util.Scanner;
+class HelloWorld {
+    public static int gcd(int a, int b){    
+        if(a == 0){
+            return b;
+        }
+        else{
+            return gcd(b%a, a);
+        }
+    }
+    public static int findgcd(int[] arr,int n){
+        int result = arr[0];
+        for(int element : arr){
+            result = gcd(result, element);
+        }
+        if(result == 1){
+            return 1;
+        }
+        return result;
+    }
+     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+        System.out.print(findgcd(arr,n));
+    }
+    
+}
